@@ -63,7 +63,7 @@ This project is a refactored version of my original Blog Review Card built with 
 
 ##### Reflections
 
-1. What challenges did you face when refactoring your code to use Bootstrap?
+**1. What challenges did you face when refactoring your code to use Bootstrap?**
 Challenge:
 One of the main challenges was translating precise custom designs into Bootstrap utility classes without writing custom CSS. For instance, replicating the exact spacing, font weights, and border effects required experimentation with Bootstrap’s padding (p-*), margin (mb-*, mt-*), and shadow classes.
 
@@ -79,7 +79,7 @@ In Bootstrap, I approximated it with:
 <div class="card p-4 shadow" style="box-shadow: 8px 8px 0 0 #000;">
 However, box-shadow like this isn’t available directly via Bootstrap, so I had to retain inline custom style. That balance between Bootstrap and minimal custom styling was tricky.
 
-2. How did using Bootstrap utility classes and components simplify your styling process?
+**2. How did using Bootstrap utility classes and components simplify your styling process?**
 Simplification:
 Bootstrap utility classes allowed for rapid layout and alignment without writing any new CSS. This meant I could use predefined classes for common layout tasks instead of repeating CSS rules.
 
@@ -95,16 +95,12 @@ body {
 I used Bootstrap classes:
 
 <body class="d-flex justify-content-center align-items-center min-vh-100 bg-warning">
-Also, for alignment and spacing:
-
-<h1 class="fs-4 fw-bold mb-3">HTML & CSS foundations</h1>
-replaced several lines of custom font and spacing rules.
-
+and also, for alignment and spacing
 Result:
 Much faster development, cleaner HTML, and fewer lines of CSS.
 
-3. In what scenarios might you choose not to use Bootstrap and write custom CSS instead?
-**Scenarios to avoid Bootstrap:**
+**3. In what scenarios might you choose not to use Bootstrap and write custom CSS instead?**
+Scenarios to avoid Bootstrap:
 
 - When working on a highly customized design system that doesn’t align with Bootstrap’s opinionated styles.
 
