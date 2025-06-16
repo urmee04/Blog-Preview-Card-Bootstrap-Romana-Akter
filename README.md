@@ -1,4 +1,4 @@
-### Lab 3.3: Developing with Bootstrap
+## Lab 3.3: Developing with Bootstrap
 
 #### Second Challenge – Blog Preview Card
 
@@ -62,67 +62,29 @@ This project is a refactored version of my original Blog Review Card built with 
 - Images have descriptive alt attributes.
 
 ##### Reflections
+**1. Challenges I faced when refactoring to Bootstrap:**
 
-**1. What challenges did you face when refactoring your code to use Bootstrap?**
-Challenge:
-One of the main challenges was translating precise custom designs into Bootstrap utility classes without writing custom CSS. For instance, replicating the exact spacing, font weights, and border effects required experimentation with Bootstrap’s padding (p-*), margin (mb-*, mt-*), and shadow classes.
+- Matching custom padding, spacing, and font styles using only Bootstrap classes.
 
-Example:
-In the original CSS, I had:
+- Recreating a custom box shadow wasn’t possible with Bootstrap alone—had to use inline CSS.
 
-.card {
-  padding: 1.5rem;
-  box-shadow: 8px 8px 0 0 var(--black);
-}
-In Bootstrap, I approximated it with:
+- Balancing between Bootstrap utility classes and minimal custom styling was tricky.
 
-<div class="card p-4 shadow" style="box-shadow: 8px 8px 0 0 #000;">
-However, box-shadow like this isn’t available directly via Bootstrap, so I had to retain inline custom style. That balance between Bootstrap and minimal custom styling was tricky.
+**2. How Bootstrap simplified my styling:**
 
-**2. How did using Bootstrap utility classes and components simplify your styling process?**
-Simplification:
-Bootstrap utility classes allowed for rapid layout and alignment without writing any new CSS. This meant I could use predefined classes for common layout tasks instead of repeating CSS rules.
+- Saved time by using classes like d-flex, justify-content-center, and fw-bold instead of writing CSS.
 
-Example:
+- Made layouts responsive faster with grid and spacing utilities.
 
-Instead of this custom CSS:
+- Reduced the amount of custom CSS and made HTML cleaner.
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-I used Bootstrap classes:
+**3. When I would use custom CSS instead of Bootstrap:**
 
-<body class="d-flex justify-content-center align-items-center min-vh-100 bg-warning">
-and also, for alignment and spacing
-Result:
-Much faster development, cleaner HTML, and fewer lines of CSS.
+- When the design requires exact styling or unique hover effects (e.g., a “card pop” on hover).
 
-**3. In what scenarios might you choose not to use Bootstrap and write custom CSS instead?**
-Scenarios to avoid Bootstrap:
+- For performance optimization—avoiding unused Bootstrap code.
 
-- When working on a highly customized design system that doesn’t align with Bootstrap’s opinionated styles.
-
-- If performance is critical and we want to avoid the overhead of the full Bootstrap bundle.
-
-- For micro-interactions or fine-tuned animations that Bootstrap doesn't support out-of-the-box.
-
-Example:
-In my original project, I had this neat hover effect:
-
-.card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 12px 12px 0 0 var(--black);
-}
-This subtle "card pop" effect is hard to recreate with Bootstrap alone, so I might choose to keep custom CSS in this case.
-
-
-
-
-
-
-
+- When creating animations or interactions not supported by Bootstrap.
 
 
 
